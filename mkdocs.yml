@@ -1,0 +1,11 @@
+site_name: My Docs
+site_name: Grocery Delivery Platform
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: orange
+nav:
+  - Introduction: index.md
+  - Functional Documentation: functional.md
+  - Use Case Documentation: usecase.md
