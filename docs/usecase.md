@@ -145,7 +145,23 @@ The document outlines how both buyers and sellers will interact with the system 
 **Post-condition:** User session ends securely.
 
 ---
+## Use Case Diagram
 
+The diagram below shows the primary actors (Customer and Seller) and the main use cases for the Grocery Delivery Website.
+
+```mermaid
+---
+config:
+  theme: base
+---
+flowchart LR
+    Customer["Customer"] --> RegisterLogin["Register / Login"] & BrowseProducts["Browse Products"] & AddToCart["Add to Cart"] & Checkout["Checkout"] & ViewOrderHistory["View Order History"] & CancelOrder["Cancel Order"]
+    Seller["Seller"] --> RegisterLogin & AddEditProduct["Add / Edit Product"] & UploadProductImage["Upload Product Image"] & ViewManageOrders["View / Manage Orders"] & UpdateOrderStatus["Update Order Status"]
+
+
+
+```
+---
 ## 5. Summary
 
 The use cases described above outline how both buyers and sellers will interact with the **Grocery Delivery Website** once it is developed.  
