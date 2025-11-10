@@ -9,3 +9,6 @@ nav:
   - Introduction: index.md
   - Functional Documentation: functional.md
   - Use Case Documentation: usecase.md
+
+plugins:
+  - mermaid2

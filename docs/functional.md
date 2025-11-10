@@ -89,6 +89,30 @@ Below is a simple overview of how each role interacts with the system.
 This structure ensures both parties have a smooth and role-specific experience.
 ---
 
+## Overall System Flow
+
+The following flowchart shows the high-level process of the Grocery Delivery Website.  
+It represents the main steps involved in both Customer and Seller interactions with the system.
+
+```mermaid
+flowchart TD
+    A[Customer] --> B[Login / Register]
+    B --> C[Browse Products]
+    C --> D[Add Items to Cart]
+    D --> E[Proceed to Checkout]
+    E --> F[Place Order]
+    F --> G[Order Stored in System]
+    G --> H[Seller Receives Order]
+    H --> J{Order Delivered Successfully?}
+    J -->|Yes| K[Order Marked as Delivered]
+    J -->|No| L[Order Remains Pending / Reattempt]
+    K --> M[Customer Views Order History]
+    M --> N[End]
+    L --> N
+```
+
+---
+
 ## Key Functionalities
 
 ### 1. Authentication
