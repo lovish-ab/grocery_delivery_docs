@@ -20,10 +20,10 @@ The document outlines how both buyers and sellers will interact with the system 
 | Use Case | Actor | Description |
 |-----------|--------|-------------|
 | Register / Login | Buyer, Seller | Authenticate users using email and password. |
-| Browse Products | Buyer, Guest | View, search, and filter grocery products. |
+| Browse Products | Buyer, Guest | View grocery products. |
 | Add to Cart | Buyer | Add grocery items to the shopping cart. |
 | Checkout | Buyer | Confirm cart items and place an order. |
-| View Orders | Buyer | Check past and ongoing orders with delivery status. |
+| View Orders | Buyer | Check past and ongoing orders. |
 | Add Product | Seller | Add a new product with details and upload image to AWS. |
 | Manage Orders | Seller | View, process, and update customer orders. |
 | Logout | Buyer, Seller | End the active session securely. |
@@ -150,14 +150,10 @@ The document outlines how both buyers and sellers will interact with the system 
 The diagram below shows the primary actors (Customer and Seller) and the main use cases for the Grocery Delivery Website.
 
 ```mermaid
----
-config:
-  theme: base
----
+ 
 flowchart LR
     Customer["Customer"] --> RegisterLogin["Register / Login"] & BrowseProducts["Browse Products"] & AddToCart["Add to Cart"] & Checkout["Checkout"] & ViewOrderHistory["View Order History"] & CancelOrder["Cancel Order"]
-    Seller["Seller"] --> RegisterLogin & AddEditProduct["Add / Edit Product"] & UploadProductImage["Upload Product Image"] & ViewManageOrders["View / Manage Orders"] & UpdateOrderStatus["Update Order Status"]
-
+    Seller["Seller"] --> RegisterLogin & AddEditProduct["Add / Edit Product"] & UploadProductImage["Upload Product Image"] & ViewManageOrders["View / Manage Orders"]
 
 
 ```
