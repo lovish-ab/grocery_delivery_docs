@@ -16,4 +16,5 @@ For sellers, product image uploads are handled securely using **AWS S3 presigned
 
 By enforcing authentication and authorization at every interaction, the system maintains **data security, controlled access, and operational integrity** throughout the Grocery Delivery Website.
 
-![auth](../assets/auth.png)
+![auth](../assets/Auth.png)
+
