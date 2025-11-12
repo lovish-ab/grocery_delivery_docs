@@ -25,8 +25,7 @@ This stack ensures a secure, efficient, and maintainable solution for managing u
 The chosen tech stack provides:  
 - **Performance:** React + Node ensures smooth frontend-backend communication.  
 - **Scalability:** PostgreSQL and AWS EC2 scale easily as traffic grows.  
-- **Security:** JWT authentication, bcrypt hashing, and HTTPS for safe data handling.  
-- **Maintainability:** Modular design using ORM and component-based frontend.  
+- **Security:** JWT authentication, bcrypt hashing, and HTTPS for safe data handling.   
 
 This setup ensures a **reliable, secure, and scalable grocery delivery platform** for both buyers and sellers.
 
