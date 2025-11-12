@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href=".." rel="prev"/>
+<link href="../usecase/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
+<title>Functional Documentation - https://lovish-ab.github.io/grocery_delivery_docs/</title>
+<link href="../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="orange" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="https://lovish-ab.github.io/grocery_delivery_docs/" class="md-header__button md-logo" data-md-component="logo" href=".." title="https://lovish-ab.github.io/grocery_delivery_docs/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            https://lovish-ab.github.io/grocery_delivery_docs/
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Functional Documentation
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="https://lovish-ab.github.io/grocery_delivery_docs/" class="md-nav__button md-logo" data-md-component="logo" href=".." title="https://lovish-ab.github.io/grocery_delivery_docs/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    https://lovish-ab.github.io/grocery_delivery_docs/
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Functional Documentation
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Functional Documentation
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+<span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scope">
+<span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proposed-solution">
+<span class="md-ellipsis">
+      
+        Proposed Solution
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technology-stack">
+<span class="md-ellipsis">
+      
+        Technology Stack
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-flow-overview">
+<span class="md-ellipsis">
+      
+        System Flow Overview
+      
+    </span>
+</a>
+<nav aria-label="System Flow Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#customer-flow">
+<span class="md-ellipsis">
+      
+        Customer Flow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seller-flow">
+<span class="md-ellipsis">
+      
+        Seller Flow
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#this-structure-ensures-both-parties-have-a-smooth-and-role-specific-experience">
+<span class="md-ellipsis">
+      
+        This structure ensures both parties have a smooth and role-specific experience.
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overall-system-flow">
+<span class="md-ellipsis">
+      
+        Overall System Flow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-functionalities">
+<span class="md-ellipsis">
+      
+        Key Functionalities
+      
+    </span>
+</a>
+<nav aria-label="Key Functionalities" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-authentication">
+<span class="md-ellipsis">
+      
+        1. Authentication
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-product-management-seller">
+<span class="md-ellipsis">
+      
+        2. Product Management (Seller)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-product-catalog-search-customer">
+<span class="md-ellipsis">
+      
+        3. Product Catalog &amp; Search (Customer)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-shopping-cart-checkout">
+<span class="md-ellipsis">
+      
+        4. Shopping Cart &amp; Checkout
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-orders-dashboard">
+<span class="md-ellipsis">
+      
+        5. Orders &amp; Dashboard
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-features">
+<span class="md-ellipsis">
+      
+        Security Features
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expected-outcome">
+<span class="md-ellipsis">
+      
+        Expected Outcome
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-enhancements">
+<span class="md-ellipsis">
+      
+        Future Enhancements
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../usecase/">
+<span class="md-ellipsis">
+    
+  
+    Use Case Documentation
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Technical Design
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Design
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../technical_stack/">
+<span class="md-ellipsis">
+    
+  
+    Technical Stack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../schema_design/">
+<span class="md-ellipsis">
+    
+  
+    Schema Design
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cloud_architecture/">
+<span class="md-ellipsis">
+    
+  
+    Cloud Architecture
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_flow/">
+<span class="md-ellipsis">
+    
+  
+    Data Flow Diagram
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../auth_flow/">
+<span class="md-ellipsis">
+    
+  
+    Authentication &amp; Authorization Flow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+<span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scope">
+<span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proposed-solution">
+<span class="md-ellipsis">
+      
+        Proposed Solution
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technology-stack">
+<span class="md-ellipsis">
+      
+        Technology Stack
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-flow-overview">
+<span class="md-ellipsis">
+      
+        System Flow Overview
+      
+    </span>
+</a>
+<nav aria-label="System Flow Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#customer-flow">
+<span class="md-ellipsis">
+      
+        Customer Flow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seller-flow">
+<span class="md-ellipsis">
+      
+        Seller Flow
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#this-structure-ensures-both-parties-have-a-smooth-and-role-specific-experience">
+<span class="md-ellipsis">
+      
+        This structure ensures both parties have a smooth and role-specific experience.
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overall-system-flow">
+<span class="md-ellipsis">
+      
+        Overall System Flow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-functionalities">
+<span class="md-ellipsis">
+      
+        Key Functionalities
+      
+    </span>
+</a>
+<nav aria-label="Key Functionalities" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-authentication">
+<span class="md-ellipsis">
+      
+        1. Authentication
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-product-management-seller">
+<span class="md-ellipsis">
+      
+        2. Product Management (Seller)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-product-catalog-search-customer">
+<span class="md-ellipsis">
+      
+        3. Product Catalog &amp; Search (Customer)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-shopping-cart-checkout">
+<span class="md-ellipsis">
+      
+        4. Shopping Cart &amp; Checkout
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-orders-dashboard">
+<span class="md-ellipsis">
+      
+        5. Orders &amp; Dashboard
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-features">
+<span class="md-ellipsis">
+      
+        Security Features
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expected-outcome">
+<span class="md-ellipsis">
+      
+        Expected Outcome
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-enhancements">
+<span class="md-ellipsis">
+      
+        Future Enhancements
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Functional Documentation</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This documentation describes the planned design and functionality of a <strong>Grocery Delivery Website</strong> that will be developed using the <strong>PERN stack</strong> (PostgreSQL, Express.js, React.js, Node.js) and integrated with <strong>AWS</strong> for media and product image storage.</p>
+<p>The idea is to build a simple, scalable web platform where:</p>
+<ul>
+<li><strong>Customers</strong> can browse grocery products, add items to their cart, and place orders online.</li>
+<li><strong>Sellers</strong> can log in, upload their products, manage stock, and handle customer orders through a dedicated dashboard.</li>
+</ul>
+<p>The website will be developed as a part of a semester project and is currently in the planning and documentation phase.</p>
+<hr/>
+<h2 id="purpose">Purpose</h2>
+<p>The primary goal of this project is to <strong>digitize the grocery shopping experience</strong> by creating a platform that connects local sellers directly with customers.  </p>
+<p>This system will also serve as a learning-oriented project to implement a full-stack web application from scratch using modern web technologies, including cloud storage and REST APIs.</p>
+<hr/>
+<h2 id="scope">Scope</h2>
+<p>This project will cover both <strong>frontend</strong> and <strong>backend</strong> development, with features focused around customers and sellers.  </p>
+<p><strong>Some of the main areas within scope include</strong>:</p>
+<ul>
+<li>A homepage showcasing product categories and best sellers.  </li>
+<li>A product search feature.  </li>
+<li>Shopping cart and checkout functionality for customers.  </li>
+<li>Seller-side dashboard for adding or editing products and managing orders.  </li>
+<li>Authentication system using JWT with role-based access.  </li>
+<li>Image storage and retrieval from AWS.  </li>
+</ul>
+<p><strong>Out of scope for the initial version are</strong>:</p>
+<ul>
+<li>Real payment integration.  </li>
+<li>Admin control panel or multi-location delivery tracking.</li>
+</ul>
+<hr/>
+<h2 id="proposed-solution">Proposed Solution</h2>
+<p>Traditional grocery shopping is limited by location, time, and manual effort. The proposed solution is to create an <strong>online grocery delivery system</strong> where both sellers and customers can interact in one place.</p>
+<p>The solution will:</p>
+<ul>
+<li>Provide a clean and responsive user interface using React.  </li>
+<li>Use Express and Node to handle server-side logic and route management.  </li>
+<li>Store all persistent data, including users, products, and orders, in PostgreSQL.  </li>
+<li>Use AWS to store product images and serve them efficiently through URLs.  </li>
+<li>Implement authentication and authorization using JSON Web Tokens (JWT).  </li>
+</ul>
+<p>The aim is to make the system flexible, secure, and easy to extend with new features later.</p>
+<hr/>
+<h2 id="technology-stack">Technology Stack</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">Technology</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Frontend</strong></td>
+<td style="text-align: left;">React.js</td>
+<td style="text-align: left;">Single-page UI with reusable components and dynamic routing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backend</strong></td>
+<td style="text-align: left;">Node.js + Express.js</td>
+<td style="text-align: left;">API layer handling requests, authentication, and data operations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Database</strong></td>
+<td style="text-align: left;">PostgreSQL</td>
+<td style="text-align: left;">Relational database for structured storage of products, users, and orders.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cloud Storage</strong></td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">For image uploads (product photos, banners, etc.).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Authentication</strong></td>
+<td style="text-align: left;">JWT (JSON Web Token)</td>
+<td style="text-align: left;">Role-based user authentication and route protection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Styling</strong></td>
+<td style="text-align: left;">Tailwind</td>
+<td style="text-align: left;">Responsive and clean UI for both desktop and mobile.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Version Control</strong></td>
+<td style="text-align: left;">Git + GitHub</td>
+<td style="text-align: left;">Code management and collaboration.</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="system-flow-overview">System Flow Overview</h2>
+<p>The application will have two key roles: <strong>Customer</strong> and <strong>Seller</strong>.<br/>
+Below is a simple overview of how each role interacts with the system.</p>
+<h3 id="customer-flow">Customer Flow</h3>
+<ol>
+<li>The user visits the website and browses available groceries.  </li>
+<li>They can search for specific items or view categories.  </li>
+<li>After logging in, they add items to the cart and proceed to checkout.  </li>
+<li>On checkout, the order is stored in the database, and the seller is notified.  </li>
+</ol>
+<h3 id="seller-flow">Seller Flow</h3>
+<ol>
+<li>The seller logs in via a separate portal or dashboard.  </li>
+<li>They can add new products with details and upload images.   </li>
+<li>New orders appear in their dashboard for review and processing.  </li>
+</ol>
+<h2 id="this-structure-ensures-both-parties-have-a-smooth-and-role-specific-experience">This structure ensures both parties have a smooth and role-specific experience.</h2>
+<h2 id="overall-system-flow">Overall System Flow</h2>
+<p>The following flowchart shows the high-level process of the Grocery Delivery Website.<br/>
+It represents the main steps involved in both Customer and Seller interactions with the system.</p>
+<div class="mermaid">flowchart TD
+    A[Customer] --&gt; B[Login / Register]
+    B --&gt; C[Browse Products]
+    C --&gt; D[Add Items to Cart]
+    D --&gt; E[Proceed to Checkout]
+    E --&gt; F[Place Order]
+    F --&gt; G[Order Stored in System]
+    G --&gt; H[Seller Receives Order]
+    H --&gt; J{Order Delivered Successfully?}
+    J --&gt;|Yes| K[Order Marked as Delivered]
+    J --&gt;|No| L[Order Remains Pending / Reattempt]
+    K --&gt; M[Customer Views Order History]
+    M --&gt; N[End]
+    L --&gt; N
+</div>
+<hr/>
+<h2 id="key-functionalities">Key Functionalities</h2>
+<h3 id="1-authentication">1. Authentication</h3>
+<ul>
+<li>Login, register, and logout functionality for both roles.</li>
+<li>JWT-based session handling and role verification.</li>
+<li>Basic validation for inputs and user credentials.</li>
+</ul>
+<h3 id="2-product-management-seller">2. Product Management (Seller)</h3>
+<ul>
+<li>Product data stored in PostgreSQL, with images uploaded to AWS.</li>
+<li>Option to mark best-sellers or featured items.</li>
+</ul>
+<h3 id="3-product-catalog-search-customer">3. Product Catalog &amp; Search (Customer)</h3>
+<ul>
+<li>Customers can browse products by category.</li>
+<li>Real-time search and product filters.</li>
+</ul>
+<h3 id="4-shopping-cart-checkout">4. Shopping Cart &amp; Checkout</h3>
+<ul>
+<li>Add/remove items and update quantity in the cart.</li>
+<li>Order summary generated at checkout.</li>
+</ul>
+<h3 id="5-orders-dashboard">5. Orders &amp; Dashboard</h3>
+<ul>
+<li>Sellers can see customer orders and update their status.</li>
+<li>Customers can view their active and past orders.</li>
+<li>Both dashboards will show essential information based on the logged-in role.</li>
+</ul>
+<hr/>
+<h2 id="security-features">Security Features</h2>
+<p>Security will be implemented through:</p>
+<ul>
+<li><strong>JWT authentication</strong> to verify and protect all private routes.  </li>
+<li><strong>Password hashing</strong> using bcrypt before storing user credentials.</li>
+</ul>
+<p>The goal is to ensure user and product data remain safe throughout all operations.</p>
+<hr/>
+<h2 id="expected-outcome">Expected Outcome</h2>
+<p>After development, the system should:</p>
+<ul>
+<li>Provide an efficient and user-friendly grocery shopping experience.  </li>
+<li>Offer a structured product and order management dashboard for sellers.  </li>
+<li>Ensure data security and reliability using PostgreSQL and AWS.   </li>
+<li>Demonstrate strong understanding and application of the PERN stack.</li>
+</ul>
+<p>This project is expected to serve as both a functional prototype and a strong learning example for full-stack development with cloud integration.</p>
+<hr/>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<p>Once the core system is stable, additional features could be added:</p>
+<ul>
+<li>Payment gateway integration (Stripe, Razorpay).  </li>
+<li>Email notifications for order confirmation or shipment.  </li>
+<li>Real-time delivery tracking.  </li>
+</ul>
+<p>These can be implemented incrementally without major architectural changes.</p>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>This Functional Documentation presents the proposed plan for building a <strong>Grocery Delivery Website</strong> using the <strong>PERN stack and AWS</strong>.<br/>
+The system will streamline grocery shopping by giving customers an online platform and sellers a smart management dashboard.  </p>
+<p>By focusing on cloud integration, responsive UI, and secure architecture, the project aims to create a practical, scalable solution that can evolve into a complete e-commerce application in the future.<br/>
+This document serves as the foundation for the development phase, outlining how each part of the system will come together.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

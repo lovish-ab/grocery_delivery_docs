@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../functional/" rel="prev"/>
+<link href="../technical_stack/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
+<title>Use Case Documentation - https://lovish-ab.github.io/grocery_delivery_docs/</title>
+<link href="../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="orange" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#1-introduction">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="https://lovish-ab.github.io/grocery_delivery_docs/" class="md-header__button md-logo" data-md-component="logo" href=".." title="https://lovish-ab.github.io/grocery_delivery_docs/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            https://lovish-ab.github.io/grocery_delivery_docs/
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Use Case Documentation
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="https://lovish-ab.github.io/grocery_delivery_docs/" class="md-nav__button md-logo" data-md-component="logo" href=".." title="https://lovish-ab.github.io/grocery_delivery_docs/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    https://lovish-ab.github.io/grocery_delivery_docs/
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../functional/">
+<span class="md-ellipsis">
+    
+  
+    Functional Documentation
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Use Case Documentation
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Use Case Documentation
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-introduction">
+<span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-actors">
+<span class="md-ellipsis">
+      
+        2. Actors
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-use-case-summary">
+<span class="md-ellipsis">
+      
+        3. Use Case Summary
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-detailed-use-cases">
+<span class="md-ellipsis">
+      
+        4. Detailed Use Cases
+      
+    </span>
+</a>
+<nav aria-label="4. Detailed Use Cases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc1-register-login">
+<span class="md-ellipsis">
+      
+        UC1: Register / Login
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc2-browse-products">
+<span class="md-ellipsis">
+      
+        UC2: Browse Products
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc3-add-to-cart">
+<span class="md-ellipsis">
+      
+        UC3: Add to Cart
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc4-checkout">
+<span class="md-ellipsis">
+      
+        UC4: Checkout
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc5-view-orders">
+<span class="md-ellipsis">
+      
+        UC5: View Orders
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc6-add-product">
+<span class="md-ellipsis">
+      
+        UC6: Add Product
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc7-manage-orders">
+<span class="md-ellipsis">
+      
+        UC7: Manage Orders
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc8-logout">
+<span class="md-ellipsis">
+      
+        UC8: Logout
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-case-diagram">
+<span class="md-ellipsis">
+      
+        Use Case Diagram
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-summary">
+<span class="md-ellipsis">
+      
+        5. Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Technical Design
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Design
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../technical_stack/">
+<span class="md-ellipsis">
+    
+  
+    Technical Stack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../schema_design/">
+<span class="md-ellipsis">
+    
+  
+    Schema Design
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cloud_architecture/">
+<span class="md-ellipsis">
+    
+  
+    Cloud Architecture
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_flow/">
+<span class="md-ellipsis">
+    
+  
+    Data Flow Diagram
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../auth_flow/">
+<span class="md-ellipsis">
+    
+  
+    Authentication &amp; Authorization Flow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-introduction">
+<span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-actors">
+<span class="md-ellipsis">
+      
+        2. Actors
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-use-case-summary">
+<span class="md-ellipsis">
+      
+        3. Use Case Summary
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-detailed-use-cases">
+<span class="md-ellipsis">
+      
+        4. Detailed Use Cases
+      
+    </span>
+</a>
+<nav aria-label="4. Detailed Use Cases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc1-register-login">
+<span class="md-ellipsis">
+      
+        UC1: Register / Login
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc2-browse-products">
+<span class="md-ellipsis">
+      
+        UC2: Browse Products
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc3-add-to-cart">
+<span class="md-ellipsis">
+      
+        UC3: Add to Cart
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc4-checkout">
+<span class="md-ellipsis">
+      
+        UC4: Checkout
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc5-view-orders">
+<span class="md-ellipsis">
+      
+        UC5: View Orders
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc6-add-product">
+<span class="md-ellipsis">
+      
+        UC6: Add Product
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc7-manage-orders">
+<span class="md-ellipsis">
+      
+        UC7: Manage Orders
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uc8-logout">
+<span class="md-ellipsis">
+      
+        UC8: Logout
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-case-diagram">
+<span class="md-ellipsis">
+      
+        Use Case Diagram
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-summary">
+<span class="md-ellipsis">
+      
+        5. Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Use Case Documentation</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>This section describes all possible <strong>use cases</strong> for the Grocery Delivery Website, built using the <strong>PERN stack (PostgreSQL, Express.js, React.js, Node.js)</strong> with <strong>AWS</strong> for image storage.<br/>
+The document outlines how both buyers and sellers will interact with the system once it is developed.</p>
+<hr/>
+<h2 id="2-actors">2. Actors</h2>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Buyer</strong></td>
+<td>Registered customer who can browse, add to cart, and purchase groceries.</td>
+</tr>
+<tr>
+<td><strong>Seller</strong></td>
+<td>Vendor who can add, edit, and manage products and orders.</td>
+</tr>
+<tr>
+<td><strong>System</strong></td>
+<td>The web application that processes user actions, stores data, and handles requests through APIs.</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="3-use-case-summary">3. Use Case Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Actor</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Register / Login</td>
+<td>Buyer, Seller</td>
+<td>Authenticate users using email and password.</td>
+</tr>
+<tr>
+<td>Browse Products</td>
+<td>Buyer, Guest</td>
+<td>View grocery products.</td>
+</tr>
+<tr>
+<td>Add to Cart</td>
+<td>Buyer</td>
+<td>Add grocery items to the shopping cart.</td>
+</tr>
+<tr>
+<td>Checkout</td>
+<td>Buyer</td>
+<td>Confirm cart items and place an order.</td>
+</tr>
+<tr>
+<td>View Orders</td>
+<td>Buyer</td>
+<td>Check past and ongoing orders.</td>
+</tr>
+<tr>
+<td>Add Product</td>
+<td>Seller</td>
+<td>Add a new product with details and upload image to AWS.</td>
+</tr>
+<tr>
+<td>Manage Orders</td>
+<td>Seller</td>
+<td>View, process, and update customer orders.</td>
+</tr>
+<tr>
+<td>Logout</td>
+<td>Buyer, Seller</td>
+<td>End the active session securely.</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="4-detailed-use-cases">4. Detailed Use Cases</h2>
+<h3 id="uc1-register-login">UC1: Register / Login</h3>
+<p><strong>Actor:</strong> Buyer / Seller<br/>
+<strong>Description:</strong> Allows users to create accounts or log into the system securely.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>User enters email and password.</li>
+<li>The system verifies credentials in <strong>PostgreSQL</strong>.</li>
+<li>If valid, a <strong>JWT token</strong> is generated for session management.</li>
+<li>User is redirected to the respective dashboard (Buyer / Seller).</li>
+</ol>
+<p><strong>Alternate Flow:</strong>
+- Invalid credentials → Error message displayed.</p>
+<p><strong>Post-condition:</strong> User session becomes active and authenticated.</p>
+<hr/>
+<h3 id="uc2-browse-products">UC2: Browse Products</h3>
+<p><strong>Actor:</strong> Buyer / Guest<br/>
+<strong>Description:</strong> Displays all available grocery items and allows searching or filtering.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>User opens the homepage.</li>
+<li>The system fetches product data from the <strong>PostgreSQL</strong> database.</li>
+<li>Products are displayed by category or popularity.</li>
+<li>Clicking on a product opens a detailed view.</li>
+</ol>
+<p><strong>Post-condition:</strong> Products displayed successfully.</p>
+<hr/>
+<h3 id="uc3-add-to-cart">UC3: Add to Cart</h3>
+<p><strong>Actor:</strong> Buyer<br/>
+<strong>Description:</strong> Allows users to select items to purchase.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>User clicks "Add to Cart" on a product.</li>
+<li>Product details are temporarily stored (in local storage or user session).</li>
+<li>Cart icon updates with the new count.</li>
+<li>Cart items are saved in the database for logged-in users.</li>
+</ol>
+<p><strong>Alternate Flow:</strong><br/>
+- If a product is out of stock → Display “Out of Stock” message.</p>
+<p><strong>Post-condition:</strong> Selected items are visible in the user’s cart.</p>
+<hr/>
+<h3 id="uc4-checkout">UC4: Checkout</h3>
+<p><strong>Actor:</strong> Buyer<br/>
+<strong>Description:</strong> Finalizes purchase and creates an order record.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>User reviews cart and clicks “Checkout.”</li>
+<li>System validates cart data and stock availability.</li>
+<li>Buyer enters shipping address and simulated payment details.</li>
+<li>Order details are stored in <strong>PostgreSQL</strong>.</li>
+</ol>
+<p><strong>Post-condition:</strong> Order successfully created and assigned a unique order ID.</p>
+<hr/>
+<h3 id="uc5-view-orders">UC5: View Orders</h3>
+<p><strong>Actor:</strong> Buyer<br/>
+<strong>Description:</strong> Enables buyers to track all their orders.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>Buyer navigates to “My Orders.”</li>
+<li>System retrieves order list and status from the database.</li>
+</ol>
+<p><strong>Post-condition:</strong> Buyer can view both past and ongoing orders.</p>
+<hr/>
+<h3 id="uc6-add-product">UC6: Add Product</h3>
+<p><strong>Actor:</strong> Seller<br/>
+<strong>Description:</strong> Allows sellers to add grocery items for customers to view and purchase.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>Seller logs into their dashboard.  </li>
+<li>Fills out product details (name, price, category,etc).  </li>
+<li>Uploads an image via a <strong>presigned URL</strong> to <strong>AWS S3</strong>.  </li>
+<li>The image URL and product data are stored in <strong>PostgreSQL</strong>.  </li>
+</ol>
+<p><strong>Post-condition:</strong> Product becomes visible to all buyers.</p>
+<hr/>
+<h3 id="uc7-manage-orders">UC7: Manage Orders</h3>
+<p><strong>Actor:</strong> Seller<br/>
+<strong>Description:</strong> Allows sellers to manage customer orders and update their status.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>Seller opens the “Orders” section on the dashboard.  </li>
+<li>System displays orders assigned to that seller.</li>
+<li>Buyer receives the updated status in their account view.</li>
+</ol>
+<p><strong>Post-condition:</strong> Orders are updated and synchronized for both users.</p>
+<hr/>
+<h3 id="uc8-logout">UC8: Logout</h3>
+<p><strong>Actor:</strong> Buyer / Seller<br/>
+<strong>Description:</strong> Ends the active session for a logged-in user.<br/>
+<strong>Flow:</strong></p>
+<ol>
+<li>User clicks the “Logout” button.  </li>
+<li>JWT token is removed or invalidated on the client side.  </li>
+<li>User is redirected to the login page.</li>
+</ol>
+<p><strong>Post-condition:</strong> User session ends securely.</p>
+<hr/>
+<h2 id="use-case-diagram">Use Case Diagram</h2>
+<p>The diagram below shows the primary actors (Customer and Seller) and the main use cases for the Grocery Delivery Website.</p>
+<div class="mermaid">
+flowchart LR
+    Customer["Customer"] --&gt; RegisterLogin["Register / Login"] &amp; BrowseProducts["Browse Products"] &amp; AddToCart["Add to Cart"] &amp; Checkout["Checkout"] &amp; ViewOrderHistory["View Order History"] &amp; CancelOrder["Cancel Order"]
+    Seller["Seller"] --&gt; RegisterLogin &amp; AddEditProduct["Add / Edit Product"] &amp; UploadProductImage["Upload Product Image"] &amp; ViewManageOrders["View / Manage Orders"]
+
+
+</div>
+<hr/>
+<h2 id="5-summary">5. Summary</h2>
+<p>The use cases described above outline how both buyers and sellers will interact with the <strong>Grocery Delivery Website</strong> once it is developed.<br/>
+All business operations — from browsing groceries to managing orders — will be handled through a secure and efficient <strong>PERN stack</strong> system with <strong>AWS</strong> for scalable media storage.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
