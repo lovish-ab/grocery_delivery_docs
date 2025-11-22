@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#indexing-table">
+<a class="md-skip" href="#indexing-table-updated-for-this-schema">
           Skip to content
         </a>
 </div>
@@ -170,10 +170,10 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#indexing-table">
+<a class="md-nav__link" href="#indexing-table-updated-for-this-schema">
 <span class="md-ellipsis">
       
-        Indexing Table
+        Indexing Table (updated for this schema)
       
     </span>
 </a>
@@ -235,10 +235,10 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#indexing-table">
+<a class="md-nav__link" href="#indexing-table-updated-for-this-schema">
 <span class="md-ellipsis">
       
-        Indexing Table
+        Indexing Table (updated for this schema)
       
     </span>
 </a>
@@ -255,84 +255,75 @@
 
     users {
         int id PK
-        varchar name
+        varchar fullName
         varchar email
         varchar password
-        timestamptz created_at
-        timestamptz updated_at
-        timestamptz deleted_at
+        varchar role
+        varchar phoneNumber
+        timestamptz createdAt
+        timestamptz updatedAt
     }
 
-    roles {
+    sellers {
         int id PK
-        varchar name
-        timestamptz created_at
-        timestamptz updated_at
-        timestamptz deleted_at
-    }
-
-    user_roles {
-        int id PK
-        int user_id FK
-        int role_id FK
-        timestamptz created_at
-        timestamptz updated_at
-        timestamptz deleted_at
+        int userId FK
+        timestamptz createdAt
+        timestamptz updatedAt
     }
 
     products {
         int id PK
-        int seller_id FK
+        int sellerId FK
         varchar name
-        float price
-        varchar image_url
-        timestamptz created_at
-        timestamptz updated_at
-        timestamptz deleted_at
+        numeric mrp
+        numeric currentPrice
+        varchar imagePath
+        timestamptz createdAt
+        timestamptz updatedAt
     }
 
     carts {
         int id PK
-        int user_id FK
-        timestamptz created_at
-        timestamptz updated_at
-        timestamptz deleted_at
-    }
-
-    cart_items {
-        int id PK
-        int cart_id FK
-        int product_id FK
-        int quantity
-        float total
-        timestamptz created_at
-        timestamptz updated_at
-        timestamptz deleted_at
+        int userId FK
+        json items
+        timestamptz createdAt
+        timestamptz updatedAt
     }
 
     orders {
         int id PK
-        int user_id FK
-        int cart_id FK
-        float total_amount
-        json order_details
-        timestamptz created_at
-        timestamptz updated_at
-        timestamptz deleted_at
+        int customerId FK
+        varchar shippingAddress
+        numeric totalPrice
+        timestamptz orderDate
+        timestamptz createdAt
+        timestamptz updatedAt
+    }
+
+    order_items {
+        int id PK
+        int orderId FK
+        int productId FK
+        int sellerId FK
+        int quantity
+        numeric price
+        timestamptz createdAt
+        timestamptz updatedAt
     }
 
     %% relationships
-    users ||--o{ user_roles : "has"
-    roles ||--o{ user_roles : "assigned_to"
-    %% seller is a user with seller role
-    users ||--o{ products : "lists"
-    users ||--o{ carts : "owns"
-    carts ||--o{ cart_items : "contains"
-    products ||--o{ cart_items : "added_to"
+    users ||--o{ sellers : "can_be"
+    users ||--o{ carts : "has"
     users ||--o{ orders : "places"
+
+    sellers ||--o{ products : "adds"
+    sellers ||--o{ order_items : "fulfills"
+
+    products ||--o{ order_items : "included_in"
+    orders ||--o{ order_items : "contains"
 </div>
 <hr/>
-<h2 id="indexing-table">Indexing Table</h2>
+<h2 id="indexing-table-updated-for-this-schema">Indexing Table (updated for this schema)</h2>
 <table>
 <thead>
 <tr>
@@ -345,67 +336,72 @@
 <tbody>
 <tr>
 <td><strong>users</strong></td>
-<td><code>email</code></td>
-<td>Ensures unique email entries and speeds up login validation.</td>
-<td>Quickly authenticate user during login.</td>
+<td><code>email</code> (UNIQUE)</td>
+<td>Fast lookups + enforce unique login identity.</td>
+<td>Login / auth, checking duplicate emails.</td>
 </tr>
 <tr>
 <td><strong>users</strong></td>
-<td><code>id</code></td>
-<td>Primary identifier for users in the system.</td>
-<td>Fetch user data during role or order queries.</td>
+<td><code>id</code> (PK, default index)</td>
+<td>Main reference for relations (sellers, carts, orders).</td>
+<td>Joining users with related tables.</td>
 </tr>
 <tr>
-<td><strong>roles</strong></td>
-<td><code>name</code></td>
-<td>Guarantees unique role names for system-level role management.</td>
-<td>Assign correct role (Buyer or Seller) during registration.</td>
-</tr>
-<tr>
-<td><strong>user_roles</strong></td>
-<td><code>(user_id, role_id)</code> (Composite)</td>
-<td>Prevents duplicate role assignments for a single user.</td>
-<td>Manage and verify user’s assigned roles efficiently.</td>
+<td><strong>sellers</strong></td>
+<td><code>userId</code></td>
+<td>Quickly find seller record for a given user.</td>
+<td>Load seller dashboard right after auth.</td>
 </tr>
 <tr>
 <td><strong>products</strong></td>
-<td><code>seller_id</code></td>
-<td>Enables fast lookup of all products by a seller.</td>
-<td>Display seller’s product list in their dashboard.</td>
+<td><code>sellerId</code></td>
+<td>Efficiently list all products of a seller.</td>
+<td>Seller’s “My Products” page.</td>
 </tr>
 <tr>
 <td><strong>products</strong></td>
-<td><code>name</code></td>
-<td>Improves search performance across product listings.</td>
-<td>Quickly search for grocery items by name or keyword.</td>
+<td><code>name</code> (B-tree or trigram)</td>
+<td>Speed up product search by name / keyword.</td>
+<td>Buyer search bar for grocery items.</td>
 </tr>
 <tr>
 <td><strong>carts</strong></td>
-<td><code>user_id</code></td>
-<td>Allows quick retrieval of a user’s active cart.</td>
-<td>Load user’s cart instantly after login.</td>
-</tr>
-<tr>
-<td><strong>cart_items</strong></td>
-<td><code>(cart_id, product_id)</code> (Composite)</td>
-<td>Ensures each product appears only once per cart and speeds joins.</td>
-<td>Fetch all items for a specific cart efficiently.</td>
+<td><code>userId</code></td>
+<td>Fetch the active cart for a user quickly.</td>
+<td>Show cart when user opens cart page.</td>
 </tr>
 <tr>
 <td><strong>orders</strong></td>
-<td><code>user_id</code></td>
-<td>Facilitates quick retrieval of order history for each user.</td>
-<td>Display user’s order list in order history.</td>
+<td><code>customerId</code></td>
+<td>Retrieve all orders belonging to a user.</td>
+<td>Order history in customer dashboard.</td>
 </tr>
 <tr>
 <td><strong>orders</strong></td>
-<td><code>(user_id, created_at)</code> (Composite)</td>
-<td>Optimizes order tracking and recent order queries.</td>
-<td>Sort and filter user orders by date quickly.</td>
+<td>(<code>customerId</code>, <code>createdAt</code>)</td>
+<td>Filter/sort orders by date per customer efficiently.</td>
+<td>“Recent orders” view.</td>
+</tr>
+<tr>
+<td><strong>order_items</strong></td>
+<td><code>orderId</code></td>
+<td>Quickly fetch all items for an order.</td>
+<td>Show items inside an order detail page.</td>
+</tr>
+<tr>
+<td><strong>order_items</strong></td>
+<td>(<code>orderId</code>, <code>productId</code>)</td>
+<td>Avoid duplicates and speed joins between orders and products.</td>
+<td>Reporting, checking if a product is in a specific order.</td>
+</tr>
+<tr>
+<td><strong>order_items</strong></td>
+<td><code>sellerId</code></td>
+<td>Query all order items sold by a particular seller.</td>
+<td>Seller’s sales analytics / order list.</td>
 </tr>
 </tbody>
 </table>
-<hr/>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
