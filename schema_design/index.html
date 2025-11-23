@@ -228,6 +228,7 @@
         varchar phoneNumber
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     sellers {
@@ -235,6 +236,7 @@
         int userId FK
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     products {
@@ -246,6 +248,7 @@
         varchar imagePath
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     carts {
@@ -254,6 +257,7 @@
         json items
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     orders {
@@ -264,6 +268,7 @@
         timestamptz orderDate
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     order_items {
@@ -275,6 +280,7 @@
         numeric price
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     %% relationships
