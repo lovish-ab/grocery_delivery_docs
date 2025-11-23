@@ -1,6 +1,6 @@
 ## Tech Stack Overview
 
-The **Grocery Delivery Website** is developed using the **PERN Stack** with **AWS S3** integration for scalable media storage.  
+The **FreshNest** is developed using the **PERN Stack** with **AWS S3** integration for scalable media storage.  
 This stack ensures a secure, efficient, and maintainable solution for managing users, products, and orders.
 
 ---
@@ -27,6 +27,6 @@ The chosen tech stack provides:
 - **Scalability:** PostgreSQL and AWS EC2 scale easily as traffic grows.  
 - **Security:** JWT authentication, bcrypt hashing, and HTTPS for safe data handling.   
 
-This setup ensures a **reliable, secure, and scalable grocery delivery platform** for both buyers and sellers.
+This setup ensures a **reliable, secure, and scalable platform** for both buyers and sellers.
 
 ---

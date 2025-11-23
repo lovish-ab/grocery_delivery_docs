@@ -72,8 +72,8 @@ erDiagram
 ```
 
 ---
-
-## Indexing Table (updated for this schema)
+<!-- 
+## Indexing Table 
 
 | Table Name      | Indexed Column(s)           | Reason for Indexing                                           | Use Case                                                 |
 | --------------- | --------------------------- | ------------------------------------------------------------- | -------------------------------------------------------- |
@@ -87,4 +87,4 @@ erDiagram
 | **orders**      | (`customerId`, `createdAt`) | Filter/sort orders by date per customer efficiently.          | “Recent orders” view.                                    |
 | **order_items** | `orderId`                   | Quickly fetch all items for an order.                         | Show items inside an order detail page.                  |
 | **order_items** | (`orderId`, `productId`)    | Avoid duplicates and speed joins between orders and products. | Reporting, checking if a product is in a specific order. |
-| **order_items** | `sellerId`                  | Query all order items sold by a particular seller.            | Seller’s sales analytics / order list.                   |
+| **order_items** | `sellerId`                  | Query all order items sold by a particular seller.            | Seller’s sales analytics / order list.                   | -->

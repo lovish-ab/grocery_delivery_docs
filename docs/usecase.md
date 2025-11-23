@@ -1,6 +1,6 @@
 
 ## 1. Introduction
-This section describes all possible **use cases** for the Grocery Delivery Website, built using the **PERN stack (PostgreSQL, Express.js, React.js, Node.js)** with **AWS** for image storage.  
+This section describes all possible **use cases** for the FreshNest, built using the **PERN stack (PostgreSQL, Express.js, React.js, Node.js)** with **AWS** for image storage.  
 The document outlines how both buyers and sellers will interact with the system once it is developed.
 
 ---
@@ -25,7 +25,7 @@ The document outlines how both buyers and sellers will interact with the system 
 | Checkout | Buyer | Confirm cart items and place an order. |
 | View Orders | Buyer | Check past and ongoing orders. |
 | Add Product | Seller | Add a new product with details and upload image to AWS. |
-| Manage Orders | Seller | View, process, and update customer orders. |
+| Manage Orders | Seller | View customer orders. |
 | Logout | Buyer, Seller | End the active session securely. |
 
 ---
@@ -51,13 +51,12 @@ The document outlines how both buyers and sellers will interact with the system 
 
 ### UC2: Browse Products
 **Actor:** Buyer / Guest  
-**Description:** Displays all available grocery items and allows searching or filtering.  
+**Description:** Displays all available grocery items and allows searching.  
 **Flow:**
 
 1. User opens the homepage.
 2. The system fetches product data from the **PostgreSQL** database.
-3. Products are displayed by category or popularity.
-4. Clicking on a product opens a detailed view.
+3. Products are displayed.
 
 **Post-condition:** Products displayed successfully.
 
@@ -73,8 +72,6 @@ The document outlines how both buyers and sellers will interact with the system 
 3. Cart icon updates with the new count.
 4. Cart items are saved in the database for logged-in users.
 
-**Alternate Flow:**  
-- If a product is out of stock → Display “Out of Stock” message.
 
 **Post-condition:** Selected items are visible in the user’s cart.
 
@@ -86,8 +83,8 @@ The document outlines how both buyers and sellers will interact with the system 
 **Flow:**
 
 1. User reviews cart and clicks “Checkout.”
-2. System validates cart data and stock availability.
-3. Buyer enters shipping address and simulated payment details.
+2. System validates cart data.
+3. Buyer enters shipping address.
 4. Order details are stored in **PostgreSQL**.
 
 **Post-condition:** Order successfully created and assigned a unique order ID.
@@ -100,7 +97,7 @@ The document outlines how both buyers and sellers will interact with the system 
 **Flow:**
 
 1. Buyer navigates to “My Orders.”
-2. System retrieves order list and status from the database.
+2. System retrieves order list from the database.
 
 **Post-condition:** Buyer can view both past and ongoing orders.
 
@@ -112,7 +109,7 @@ The document outlines how both buyers and sellers will interact with the system 
 **Flow:**
 
 1. Seller logs into their dashboard.  
-2. Fills out product details (name, price, category,etc).  
+2. Fills out product details (name, mrp, currentPrice).  
 3. Uploads an image via a **presigned URL** to **AWS S3**.  
 4. The image URL and product data are stored in **PostgreSQL**.  
 
@@ -122,12 +119,11 @@ The document outlines how both buyers and sellers will interact with the system 
 
 ### UC7: Manage Orders
 **Actor:** Seller  
-**Description:** Allows sellers to manage customer orders and update their status.  
+**Description:** Allows sellers to manage customer orders.  
 **Flow:**
 
 1. Seller opens the “Orders” section on the dashboard.  
 2. System displays orders assigned to that seller.
-3. Buyer receives the updated status in their account view.
 
 **Post-condition:** Orders are updated and synchronized for both users.
 
@@ -160,6 +156,6 @@ flowchart LR
 ---
 ## 5. Summary
 
-The use cases described above outline how both buyers and sellers will interact with the **Grocery Delivery Website** once it is developed.  
+The use cases described above outline how both buyers and sellers will interact with the **FreshNest** once it is developed.  
 All business operations — from browsing groceries to managing orders — will be handled through a secure and efficient **PERN stack** system with **AWS** for scalable media storage.
 
