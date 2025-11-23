@@ -23,7 +23,7 @@
     
     
       
-        <title>Authentication & Authorization Flow - Grocery Delivery</title>
+        <title>Authentication & Authorization Flow - FreshNest</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Grocery Delivery" class="md-header__button md-logo" aria-label="Grocery Delivery" data-md-component="logo">
+    <a href=".." title="FreshNest" class="md-header__button md-logo" aria-label="FreshNest" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Grocery Delivery
+            FreshNest
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -146,13 +146,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Grocery Delivery" class="md-nav__button md-logo" aria-label="Grocery Delivery" data-md-component="logo">
+    <a href=".." title="FreshNest" class="md-nav__button md-logo" aria-label="FreshNest" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Grocery Delivery
+    FreshNest
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -577,7 +577,7 @@
   <h1>Authentication & Authorization Flow</h1>
 
 <h2 id="authentication-and-authorization-flow">Authentication and Authorization Flow</h2>
-<p>The <strong>Authentication and Authorization module</strong> manages secure user access across the Grocery Delivery platform. It ensures that both <strong>buyers</strong> and <strong>sellers</strong> can interact safely with the system based on their assigned roles.</p>
+<p>The <strong>Authentication and Authorization module</strong> manages secure user access across the FreshNest. It ensures that both <strong>buyers</strong> and <strong>sellers</strong> can interact safely with the system based on their assigned roles.</p>
 <p>When a new user registers, their details are stored in the database, and a role (buyer or seller) is assigned. During login, credentials are validated, and upon success, the backend issues <strong>JWT access and refresh tokens</strong>, enabling session management without repeated logins.</p>
 <p>Once authenticated, users can access <strong>protected routes</strong> depending on their role. Buyers can browse products, add items to their cart, and place orders, while sellers can manage their inventory and add new products. Each request to protected endpoints includes a <strong>token</strong>, which is verified by the backend to confirm identity and authorization.</p>
 <p>For sellers, product image uploads are handled securely using <strong>AWS S3 presigned URLs</strong>, ensuring that only authorized users can upload media files. When a user logs out, stored refresh tokens are removed, effectively ending the session.</p>
@@ -588,7 +588,7 @@
 <li>Protected media uploads via AWS S3 presigned URLs  </li>
 <li>Smooth and consistent user experience across the platform  </li>
 </ul>
-<p>By enforcing authentication and authorization at every interaction, the system maintains <strong>data security, controlled access, and operational integrity</strong> throughout the Grocery Delivery Website.</p>
+<p>By enforcing authentication and authorization at every interaction, the system maintains <strong>data security, controlled access, and operational integrity</strong> throughout the FreshNest.</p>
 <p><img alt="auth" src="../assets/Auth.png" /></p>
 
 

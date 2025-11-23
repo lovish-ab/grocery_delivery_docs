@@ -10,7 +10,7 @@
 <link href="../technical_stack/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
-<title>Use Case Documentation - Grocery Delivery</title>
+<title>Use Case Documentation - FreshNest</title>
 <link href="../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Grocery Delivery" class="md-header__button md-logo" data-md-component="logo" href=".." title="Grocery Delivery">
+<a aria-label="FreshNest" class="md-header__button md-logo" data-md-component="logo" href=".." title="FreshNest">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -41,7 +41,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Grocery Delivery
+            FreshNest
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -63,10 +63,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Grocery Delivery" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Grocery Delivery">
+<a aria-label="FreshNest" class="md-nav__button md-logo" data-md-component="logo" href=".." title="FreshNest">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
-    Grocery Delivery
+    FreshNest
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -494,7 +494,7 @@
 <article class="md-content__inner md-typeset">
 <h1>Use Case Documentation</h1>
 <h2 id="1-introduction">1. Introduction</h2>
-<p>This section describes all possible <strong>use cases</strong> for the Grocery Delivery Website, built using the <strong>PERN stack (PostgreSQL, Express.js, React.js, Node.js)</strong> with <strong>AWS</strong> for image storage.<br/>
+<p>This section describes all possible <strong>use cases</strong> for the FreshNest, built using the <strong>PERN stack (PostgreSQL, Express.js, React.js, Node.js)</strong> with <strong>AWS</strong> for image storage.<br/>
 The document outlines how both buyers and sellers will interact with the system once it is developed.</p>
 <hr/>
 <h2 id="2-actors">2. Actors</h2>
@@ -564,7 +564,7 @@ The document outlines how both buyers and sellers will interact with the system 
 <tr>
 <td>Manage Orders</td>
 <td>Seller</td>
-<td>View, process, and update customer orders.</td>
+<td>View customer orders.</td>
 </tr>
 <tr>
 <td>Logout</td>
@@ -591,13 +591,12 @@ The document outlines how both buyers and sellers will interact with the system 
 <hr/>
 <h3 id="uc2-browse-products">UC2: Browse Products</h3>
 <p><strong>Actor:</strong> Buyer / Guest<br/>
-<strong>Description:</strong> Displays all available grocery items and allows searching or filtering.<br/>
+<strong>Description:</strong> Displays all available grocery items and allows searching.<br/>
 <strong>Flow:</strong></p>
 <ol>
 <li>User opens the homepage.</li>
 <li>The system fetches product data from the <strong>PostgreSQL</strong> database.</li>
-<li>Products are displayed by category or popularity.</li>
-<li>Clicking on a product opens a detailed view.</li>
+<li>Products are displayed.</li>
 </ol>
 <p><strong>Post-condition:</strong> Products displayed successfully.</p>
 <hr/>
@@ -611,8 +610,6 @@ The document outlines how both buyers and sellers will interact with the system 
 <li>Cart icon updates with the new count.</li>
 <li>Cart items are saved in the database for logged-in users.</li>
 </ol>
-<p><strong>Alternate Flow:</strong><br/>
-- If a product is out of stock → Display “Out of Stock” message.</p>
 <p><strong>Post-condition:</strong> Selected items are visible in the user’s cart.</p>
 <hr/>
 <h3 id="uc4-checkout">UC4: Checkout</h3>
@@ -621,8 +618,8 @@ The document outlines how both buyers and sellers will interact with the system 
 <strong>Flow:</strong></p>
 <ol>
 <li>User reviews cart and clicks “Checkout.”</li>
-<li>System validates cart data and stock availability.</li>
-<li>Buyer enters shipping address and simulated payment details.</li>
+<li>System validates cart data.</li>
+<li>Buyer enters shipping address.</li>
 <li>Order details are stored in <strong>PostgreSQL</strong>.</li>
 </ol>
 <p><strong>Post-condition:</strong> Order successfully created and assigned a unique order ID.</p>
@@ -633,7 +630,7 @@ The document outlines how both buyers and sellers will interact with the system 
 <strong>Flow:</strong></p>
 <ol>
 <li>Buyer navigates to “My Orders.”</li>
-<li>System retrieves order list and status from the database.</li>
+<li>System retrieves order list from the database.</li>
 </ol>
 <p><strong>Post-condition:</strong> Buyer can view both past and ongoing orders.</p>
 <hr/>
@@ -643,7 +640,7 @@ The document outlines how both buyers and sellers will interact with the system 
 <strong>Flow:</strong></p>
 <ol>
 <li>Seller logs into their dashboard.  </li>
-<li>Fills out product details (name, price, category,etc).  </li>
+<li>Fills out product details (name, mrp, currentPrice).  </li>
 <li>Uploads an image via a <strong>presigned URL</strong> to <strong>AWS S3</strong>.  </li>
 <li>The image URL and product data are stored in <strong>PostgreSQL</strong>.  </li>
 </ol>
@@ -651,12 +648,11 @@ The document outlines how both buyers and sellers will interact with the system 
 <hr/>
 <h3 id="uc7-manage-orders">UC7: Manage Orders</h3>
 <p><strong>Actor:</strong> Seller<br/>
-<strong>Description:</strong> Allows sellers to manage customer orders and update their status.<br/>
+<strong>Description:</strong> Allows sellers to manage customer orders.<br/>
 <strong>Flow:</strong></p>
 <ol>
 <li>Seller opens the “Orders” section on the dashboard.  </li>
 <li>System displays orders assigned to that seller.</li>
-<li>Buyer receives the updated status in their account view.</li>
 </ol>
 <p><strong>Post-condition:</strong> Orders are updated and synchronized for both users.</p>
 <hr/>
@@ -682,7 +678,7 @@ flowchart LR
 </div>
 <hr/>
 <h2 id="5-summary">5. Summary</h2>
-<p>The use cases described above outline how both buyers and sellers will interact with the <strong>Grocery Delivery Website</strong> once it is developed.<br/>
+<p>The use cases described above outline how both buyers and sellers will interact with the <strong>FreshNest</strong> once it is developed.<br/>
 All business operations — from browsing groceries to managing orders — will be handled through a secure and efficient <strong>PERN stack</strong> system with <strong>AWS</strong> for scalable media storage.</p>
 </article>
 </div>

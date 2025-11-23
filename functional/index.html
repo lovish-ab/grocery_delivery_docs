@@ -10,7 +10,7 @@
 <link href="../usecase/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
-<title>Functional Documentation - Grocery Delivery</title>
+<title>Functional Documentation - FreshNest</title>
 <link href="../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Grocery Delivery" class="md-header__button md-logo" data-md-component="logo" href=".." title="Grocery Delivery">
+<a aria-label="FreshNest" class="md-header__button md-logo" data-md-component="logo" href=".." title="FreshNest">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -41,7 +41,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Grocery Delivery
+            FreshNest
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -63,10 +63,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Grocery Delivery" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Grocery Delivery">
+<a aria-label="FreshNest" class="md-nav__button md-logo" data-md-component="logo" href=".." title="FreshNest">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
-    Grocery Delivery
+    FreshNest
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -610,23 +610,22 @@
 <article class="md-content__inner md-typeset">
 <h1>Functional Documentation</h1>
 <h2 id="introduction">Introduction</h2>
-<p>This documentation describes the planned design and functionality of a <strong>Grocery Delivery Website</strong> that will be developed using the <strong>PERN stack</strong> (PostgreSQL, Express.js, React.js, Node.js) and integrated with <strong>AWS</strong> for media and product image storage.</p>
+<p>This documentation describes the planned design and functionality of a <strong>FreshNest</strong> that will be developed using the <strong>PERN stack</strong> (PostgreSQL, Express.js, React.js, Node.js) and integrated with <strong>AWS</strong> for media and product image storage.</p>
 <p>The idea is to build a simple, scalable web platform where:</p>
 <ul>
 <li><strong>Customers</strong> can browse grocery products, add items to their cart, and place orders online.</li>
-<li><strong>Sellers</strong> can log in, upload their products, manage stock, and handle customer orders through a dedicated dashboard.</li>
+<li><strong>Sellers</strong> can log in, upload their products, manage product, and handle customer orders through a dedicated dashboard.</li>
 </ul>
-<p>The website will be developed as a part of a semester project and is currently in the planning and documentation phase.</p>
 <hr/>
 <h2 id="purpose">Purpose</h2>
 <p>The primary goal of this project is to <strong>digitize the grocery shopping experience</strong> by creating a platform that connects local sellers directly with customers.  </p>
-<p>This system will also serve as a learning-oriented project to implement a full-stack web application from scratch using modern web technologies, including cloud storage and REST APIs.</p>
+<p>This system will also serve as a learning-oriented project to implement a full-stack web application from scratch using modern web technologies, including cloud storage.</p>
 <hr/>
 <h2 id="scope">Scope</h2>
 <p>This project will cover both <strong>frontend</strong> and <strong>backend</strong> development, with features focused around customers and sellers.  </p>
 <p><strong>Some of the main areas within scope include</strong>:</p>
 <ul>
-<li>A homepage showcasing product categories and best sellers.  </li>
+<li>A homepage showcasing product.  </li>
 <li>A product search feature.  </li>
 <li>Shopping cart and checkout functionality for customers.  </li>
 <li>Seller-side dashboard for adding or editing products and managing orders.  </li>
@@ -705,9 +704,9 @@ Below is a simple overview of how each role interacts with the system.</p>
 <h3 id="customer-flow">Customer Flow</h3>
 <ol>
 <li>The user visits the website and browses available groceries.  </li>
-<li>They can search for specific items or view categories.  </li>
+<li>They can search for specific items or view all products.  </li>
 <li>After logging in, they add items to the cart and proceed to checkout.  </li>
-<li>On checkout, the order is stored in the database, and the seller is notified.  </li>
+<li>On checkout, the order is stored in the database.  </li>
 </ol>
 <h3 id="seller-flow">Seller Flow</h3>
 <ol>
@@ -727,12 +726,8 @@ It represents the main steps involved in both Customer and Seller interactions w
     E --&gt; F[Place Order]
     F --&gt; G[Order Stored in System]
     G --&gt; H[Seller Receives Order]
-    H --&gt; J{Order Delivered Successfully?}
-    J --&gt;|Yes| K[Order Marked as Delivered]
-    J --&gt;|No| L[Order Remains Pending / Reattempt]
-    K --&gt; M[Customer Views Order History]
+    H --&gt; M[Customer Views Order History]
     M --&gt; N[End]
-    L --&gt; N
 </div>
 <hr/>
 <h2 id="key-functionalities">Key Functionalities</h2>
@@ -745,12 +740,11 @@ It represents the main steps involved in both Customer and Seller interactions w
 <h3 id="2-product-management-seller">2. Product Management (Seller)</h3>
 <ul>
 <li>Product data stored in PostgreSQL, with images uploaded to AWS.</li>
-<li>Option to mark best-sellers or featured items.</li>
 </ul>
 <h3 id="3-product-catalog-search-customer">3. Product Catalog &amp; Search (Customer)</h3>
 <ul>
-<li>Customers can browse products by category.</li>
-<li>Real-time search and product filters.</li>
+<li>Customers can browse products.</li>
+<li>Real-time search.</li>
 </ul>
 <h3 id="4-shopping-cart-checkout">4. Shopping Cart &amp; Checkout</h3>
 <ul>
@@ -759,7 +753,7 @@ It represents the main steps involved in both Customer and Seller interactions w
 </ul>
 <h3 id="5-orders-dashboard">5. Orders &amp; Dashboard</h3>
 <ul>
-<li>Sellers can see customer orders and update their status.</li>
+<li>Sellers can see customer orders.</li>
 <li>Customers can view their active and past orders.</li>
 <li>Both dashboards will show essential information based on the logged-in role.</li>
 </ul>
@@ -792,7 +786,7 @@ It represents the main steps involved in both Customer and Seller interactions w
 <p>These can be implemented incrementally without major architectural changes.</p>
 <hr/>
 <h2 id="conclusion">Conclusion</h2>
-<p>This Functional Documentation presents the proposed plan for building a <strong>Grocery Delivery Website</strong> using the <strong>PERN stack and AWS</strong>.<br/>
+<p>This Functional Documentation presents the proposed plan for building  <strong>FreshNest</strong> using the <strong>PERN stack and AWS</strong>.<br/>
 The system will streamline grocery shopping by giving customers an online platform and sellers a smart management dashboard.  </p>
 <p>By focusing on cloud integration, responsive UI, and secure architecture, the project aims to create a practical, scalable solution that can evolve into a complete e-commerce application in the future.<br/>
 This document serves as the foundation for the development phase, outlining how each part of the system will come together.</p>

@@ -10,7 +10,7 @@
 <link href="../cloud_architecture/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
-<title>Schema Design - Grocery Delivery</title>
+<title>Schema Design - FreshNest</title>
 <link href="../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,15 +23,12 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#indexing-table-updated-for-this-schema">
-          Skip to content
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Grocery Delivery" class="md-header__button md-logo" data-md-component="logo" href=".." title="Grocery Delivery">
+<a aria-label="FreshNest" class="md-header__button md-logo" data-md-component="logo" href=".." title="FreshNest">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -41,7 +38,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Grocery Delivery
+            FreshNest
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -63,10 +60,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Grocery Delivery" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Grocery Delivery">
+<a aria-label="FreshNest" class="md-nav__button md-logo" data-md-component="logo" href=".." title="FreshNest">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 </a>
-    Grocery Delivery
+    FreshNest
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -142,17 +139,6 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    Schema Design
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
@@ -163,23 +149,6 @@
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#indexing-table-updated-for-this-schema">
-<span class="md-ellipsis">
-      
-        Indexing Table (updated for this schema)
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../cloud_architecture/">
@@ -229,21 +198,6 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#indexing-table-updated-for-this-schema">
-<span class="md-ellipsis">
-      
-        Indexing Table (updated for this schema)
-      
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -323,85 +277,22 @@
     orders ||--o{ order_items : "contains"
 </div>
 <hr/>
-<h2 id="indexing-table-updated-for-this-schema">Indexing Table (updated for this schema)</h2>
-<table>
-<thead>
-<tr>
-<th>Table Name</th>
-<th>Indexed Column(s)</th>
-<th>Reason for Indexing</th>
-<th>Use Case</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>users</strong></td>
-<td><code>email</code> (UNIQUE)</td>
-<td>Fast lookups + enforce unique login identity.</td>
-<td>Login / auth, checking duplicate emails.</td>
-</tr>
-<tr>
-<td><strong>users</strong></td>
-<td><code>id</code> (PK, default index)</td>
-<td>Main reference for relations (sellers, carts, orders).</td>
-<td>Joining users with related tables.</td>
-</tr>
-<tr>
-<td><strong>sellers</strong></td>
-<td><code>userId</code></td>
-<td>Quickly find seller record for a given user.</td>
-<td>Load seller dashboard right after auth.</td>
-</tr>
-<tr>
-<td><strong>products</strong></td>
-<td><code>sellerId</code></td>
-<td>Efficiently list all products of a seller.</td>
-<td>Seller’s “My Products” page.</td>
-</tr>
-<tr>
-<td><strong>products</strong></td>
-<td><code>name</code> (B-tree or trigram)</td>
-<td>Speed up product search by name / keyword.</td>
-<td>Buyer search bar for grocery items.</td>
-</tr>
-<tr>
-<td><strong>carts</strong></td>
-<td><code>userId</code></td>
-<td>Fetch the active cart for a user quickly.</td>
-<td>Show cart when user opens cart page.</td>
-</tr>
-<tr>
-<td><strong>orders</strong></td>
-<td><code>customerId</code></td>
-<td>Retrieve all orders belonging to a user.</td>
-<td>Order history in customer dashboard.</td>
-</tr>
-<tr>
-<td><strong>orders</strong></td>
-<td>(<code>customerId</code>, <code>createdAt</code>)</td>
-<td>Filter/sort orders by date per customer efficiently.</td>
-<td>“Recent orders” view.</td>
-</tr>
-<tr>
-<td><strong>order_items</strong></td>
-<td><code>orderId</code></td>
-<td>Quickly fetch all items for an order.</td>
-<td>Show items inside an order detail page.</td>
-</tr>
-<tr>
-<td><strong>order_items</strong></td>
-<td>(<code>orderId</code>, <code>productId</code>)</td>
-<td>Avoid duplicates and speed joins between orders and products.</td>
-<td>Reporting, checking if a product is in a specific order.</td>
-</tr>
-<tr>
-<td><strong>order_items</strong></td>
-<td><code>sellerId</code></td>
-<td>Query all order items sold by a particular seller.</td>
-<td>Seller’s sales analytics / order list.</td>
-</tr>
-</tbody>
-</table>
+<!-- 
+## Indexing Table 
+
+| Table Name      | Indexed Column(s)           | Reason for Indexing                                           | Use Case                                                 |
+| --------------- | --------------------------- | ------------------------------------------------------------- | -------------------------------------------------------- |
+| **users**       | `email` (UNIQUE)            | Fast lookups + enforce unique login identity.                 | Login / auth, checking duplicate emails.                 |
+| **users**       | `id` (PK, default index)    | Main reference for relations (sellers, carts, orders).        | Joining users with related tables.                       |
+| **sellers**     | `userId`                    | Quickly find seller record for a given user.                  | Load seller dashboard right after auth.                  |
+| **products**    | `sellerId`                  | Efficiently list all products of a seller.                    | Seller’s “My Products” page.                             |
+| **products**    | `name` (B-tree or trigram)  | Speed up product search by name / keyword.                    | Buyer search bar for grocery items.                      |
+| **carts**       | `userId`                    | Fetch the active cart for a user quickly.                     | Show cart when user opens cart page.                     |
+| **orders**      | `customerId`                | Retrieve all orders belonging to a user.                      | Order history in customer dashboard.                     |
+| **orders**      | (`customerId`, `createdAt`) | Filter/sort orders by date per customer efficiently.          | “Recent orders” view.                                    |
+| **order_items** | `orderId`                   | Quickly fetch all items for an order.                         | Show items inside an order detail page.                  |
+| **order_items** | (`orderId`, `productId`)    | Avoid duplicates and speed joins between orders and products. | Reporting, checking if a product is in a specific order. |
+| **order_items** | `sellerId`                  | Query all order items sold by a particular seller.            | Seller’s sales analytics / order list.                   | -->
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
