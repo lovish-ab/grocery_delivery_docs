@@ -10,6 +10,7 @@ erDiagram
         varchar phoneNumber
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     sellers {
@@ -17,6 +18,7 @@ erDiagram
         int userId FK
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     products {
@@ -28,6 +30,7 @@ erDiagram
         varchar imagePath
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     carts {
@@ -36,6 +39,7 @@ erDiagram
         json items
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     orders {
@@ -46,6 +50,7 @@ erDiagram
         timestamptz orderDate
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     order_items {
@@ -57,6 +62,7 @@ erDiagram
         numeric price
         timestamptz createdAt
         timestamptz updatedAt
+        timestamptz deletedAt
     }
 
     %% relationships
@@ -70,7 +76,6 @@ erDiagram
     products ||--o{ order_items : "included_in"
     orders ||--o{ order_items : "contains"
 ```
-
 ---
 <!-- 
 ## Indexing Table 
