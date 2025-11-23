@@ -207,80 +207,77 @@
 <h1>Schema Design</h1>
 <div class="mermaid">erDiagram
 
-    users {
-        int id PK
-        varchar fullName
-        varchar email
-        varchar password
-        varchar role
-        varchar phoneNumber
+    USERS {
+        int id
+        string fullName
+        string email
+        string phoneNumber
+        string password
+        string role
         timestamptz createdAt
         timestamptz updatedAt
         timestamptz deletedAt
     }
 
-    sellers {
-        int id PK
-        int userId FK
+    SELLERS {
+        int id
+        int userId
         timestamptz createdAt
         timestamptz updatedAt
         timestamptz deletedAt
     }
 
-    products {
-        int id PK
-        int sellerId FK
-        varchar name
-        numeric mrp
-        numeric currentPrice
-        varchar imagePath
+    PRODUCTS {
+        int id
+        int sellerId
+        string name
+        decimal mrp
+        decimal currentPrice
+        string imagePath
         timestamptz createdAt
         timestamptz updatedAt
         timestamptz deletedAt
     }
 
-    carts {
-        int id PK
-        int userId FK
-        json items
-        timestamptz createdAt
-        timestamptz updatedAt
-        timestamptz deletedAt
-    }
-
-    orders {
-        int id PK
-        int customerId FK
-        varchar shippingAddress
-        numeric totalPrice
+    ORDERS {
+        int id
+        int customerId
+        text shippingAddress
+        decimal totalPrice
         timestamptz orderDate
         timestamptz createdAt
         timestamptz updatedAt
         timestamptz deletedAt
     }
 
-    order_items {
-        int id PK
-        int orderId FK
-        int productId FK
-        int sellerId FK
+    ORDER_ITEMS {
+        int id
+        int orderId
+        int productId
+        int sellerId
         int quantity
-        numeric price
+        decimal price
         timestamptz createdAt
         timestamptz updatedAt
         timestamptz deletedAt
     }
 
-    %% relationships
-    users ||--o{ sellers : "can_be"
-    users ||--o{ carts : "has"
-    users ||--o{ orders : "places"
+    CARTS {
+        int id
+        int userId
+        json items
+        timestamptz createdAt
+        timestamptz updatedAt
+        timestamptz deletedAt
+    }
 
-    sellers ||--o{ products : "adds"
-    sellers ||--o{ order_items : "fulfills"
-
-    products ||--o{ order_items : "included_in"
-    orders ||--o{ order_items : "contains"
+    USERS ||--|| SELLERS : "has one"
+    USERS ||--|| CARTS   : "has one"
+    SELLERS ||--o{ PRODUCTS    : "adds"
+    USERS   ||--o{ ORDERS      : "places"
+    ORDERS  ||--o{ ORDER_ITEMS : "has"
+    PRODUCTS||--o{ ORDER_ITEMS : "contains"
+    SELLERS ||--o{ ORDER_ITEMS : "sells"
 </div>
 <hr/>
 <!-- 
