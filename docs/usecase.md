@@ -148,7 +148,7 @@ The diagram below shows the primary actors (Customer and Seller) and the main us
 ```mermaid
  
 flowchart LR
-    Customer["Customer"] --> RegisterLogin["Register / Login"] & BrowseProducts["Browse Products"] & AddToCart["Add to Cart"] & Checkout["Checkout"] & ViewOrderHistory["View Order History"] & CancelOrder["Cancel Order"]
+    Customer["Customer"] --> RegisterLogin["Register / Login"] & BrowseProducts["Browse Products"] & AddToCart["Add to Cart"] & Checkout["Checkout"] & ViewOrderHistory["View Order History"]
     Seller["Seller"] --> RegisterLogin & AddEditProduct["Add / Edit Product"] & UploadProductImage["Upload Product Image"] & ViewManageOrders["View / Manage Orders"]
 
 
