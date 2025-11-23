@@ -1,6 +1,6 @@
 # FreshNest
 
-The **FreshNest** is a full-stack web application developed using the **PERN Stack (PostgreSQL Express.js, React.js, Node.js)** with **AWS** integration for image storage.  
+The **FreshNest** is a full-stack web application developed using the **PERN Stack (PostgreSQL Express.js, React.js, Node.js)** with **AWS S3** integration for image storage.  
 It is designed to connect customers and sellers through a simple, fast, and secure online grocery shopping experience.
 
 ---

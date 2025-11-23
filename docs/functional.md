@@ -1,7 +1,7 @@
 
 ## Introduction
 
-This documentation describes the planned design and functionality of a **FreshNest** that will be developed using the **PERN stack** (PostgreSQL, Express.js, React.js, Node.js) and integrated with **AWS** for media and product image storage.
+This documentation describes the planned design and functionality of a **FreshNest** that will be developed using the **PERN stack** (PostgreSQL, Express.js, React.js, Node.js) and integrated with **AWS S3** for media and product image storage.
 
 The idea is to build a simple, scalable web platform where:
 
@@ -61,7 +61,7 @@ The aim is to make the system flexible, secure, and easy to extend with new feat
 | **Frontend** | React.js | Single-page UI with reusable components and dynamic routing. |
 | **Backend** | Node.js + Express.js | API layer handling requests, authentication, and data operations. |
 | **Database** | PostgreSQL | Relational database for structured storage of products, users, and orders. |
-| **Cloud Storage** | AWS | For image uploads (product photos, banners, etc.). |
+| **Cloud Storage** | AWS S3 | For image uploads (product photos, banners, etc.). |
 | **Authentication** | JWT (JSON Web Token) | Role-based user authentication and route protection. |
 | **Styling** | Tailwind | Responsive and clean UI for both desktop and mobile. |
 | **Version Control** | Git + GitHub | Code management and collaboration. |
