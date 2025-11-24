@@ -271,13 +271,13 @@
         timestamptz deletedAt
     }
 
-    USERS ||--|| SELLERS : "has one"
-    USERS ||--|| CARTS   : "has one"
-    SELLERS ||--o{ PRODUCTS    : "adds"
-    USERS   ||--o{ ORDERS      : "places"
-    ORDERS  ||--o{ ORDER_ITEMS : "has"
-    PRODUCTS||--o{ ORDER_ITEMS : "contains"
-    SELLERS ||--o{ ORDER_ITEMS : "sells"
+    users ||--|| sellers : "has one"
+    users ||--|| carts   : "has one"
+    sellers ||--o{ products    : "adds"
+    users   ||--o{ orders      : "places"
+    orders  ||--o{ order_items: "has"
+    products||--o{ order_items: "contains"
+    sellers ||--o{ order_items  : "sells"
 </div>
 <hr/>
 <!-- 
