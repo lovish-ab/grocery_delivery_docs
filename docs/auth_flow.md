@@ -6,7 +6,7 @@ When a new user registers, their details are stored in the database, and a role 
 
 Once authenticated, users can access **protected routes** depending on their role. Buyers can browse products, add items to their cart, and place orders, while sellers can manage their inventory and add new products. Each request to protected endpoints includes a **token**, which is verified by the backend to confirm identity and authorization.
 
-For sellers, product image uploads are handled securely using **AWS S3 presigned URLs**, ensuring that only authorized users can upload media files. When a user logs out, stored refresh tokens are removed, effectively ending the session.
+For sellers, product image uploads are handled securely using **AWS S3 presigned URLs**, ensuring that only authorized users can upload media files. When a user logs out, stored tokens are removed, effectively ending the session.
 
 ### This module ensures:
 - Secure, token-based authentication and session handling  

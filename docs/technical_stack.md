@@ -15,7 +15,6 @@ This stack ensures a secure, efficient, and maintainable solution for managing u
 | **Styling** | **Tailwind CSS** | Utility-first CSS framework. | Builds a clean, responsive, and modern UI. |
 | **Security** | **Bcrypt.js,CORS** | Libraries for encryption and request protection. | Ensures secure data transmission and protects against common vulnerabilities. |
 | **DevOps / Deployment** | **GitHub Actions + AWS EC2** | CI/CD pipeline and cloud instance for hosting. | Automates deployment and ensures scalable cloud hosting. |
-| **API Testing** | **Postman** | Tools for testing and validating APIs. | Verifies endpoints and backend responses during development. |
 | **Environment Config** | **Dotenv** | Environment variable management. | Keeps credentials and configuration secure. |
 
 ---

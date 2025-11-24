@@ -44,8 +44,7 @@ Traditional grocery shopping is limited by location, time, and manual effort. Th
 
 The solution will:
 
-- Provide a clean and responsive user interface using React.  
-- Use Express and Node to handle server-side logic and route management.  
+- Provide a clean and responsive user interface using React.   
 - Store all persistent data, including users, products, and orders, in PostgreSQL.  
 - Use AWS to store product images and serve them efficiently through URLs.  
 - Implement authentication and authorization using JSON Web Tokens (JWT).  
@@ -117,9 +116,8 @@ flowchart TD
 ### 2. Product Management (Seller)
 - Product data stored in PostgreSQL, with images uploaded to AWS.
 
-### 3. Product Catalog & Search (Customer)
+### 3. Product Search (Customer)
 - Customers can browse products.
-- Real-time search.
 
 ### 4. Shopping Cart & Checkout
 - Add/remove items and update quantity in the cart.
