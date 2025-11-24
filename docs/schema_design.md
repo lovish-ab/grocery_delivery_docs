@@ -1,7 +1,7 @@
 ```mermaid
 erDiagram
 
-    USERS {
+    users{
         int id
         string fullName
         string email
@@ -13,7 +13,7 @@ erDiagram
         timestamptz deletedAt
     }
 
-    SELLERS {
+    sellers {
         int id
         int userId
         timestamptz createdAt
@@ -21,7 +21,7 @@ erDiagram
         timestamptz deletedAt
     }
 
-    PRODUCTS {
+    products {
         int id
         int sellerId
         string name
@@ -33,7 +33,7 @@ erDiagram
         timestamptz deletedAt
     }
 
-    ORDERS {
+    orders {
         int id
         int customerId
         text shippingAddress
@@ -44,7 +44,7 @@ erDiagram
         timestamptz deletedAt
     }
 
-    ORDER_ITEMS {
+    order_items {
         int id
         int orderId
         int productId
@@ -56,7 +56,7 @@ erDiagram
         timestamptz deletedAt
     }
 
-    CARTS {
+    carts {
         int id
         int userId
         json items
