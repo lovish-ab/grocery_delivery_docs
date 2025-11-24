@@ -207,7 +207,7 @@
 <h1>Schema Design</h1>
 <div class="mermaid">erDiagram
 
-    USERS {
+    users{
         int id
         string fullName
         string email
@@ -219,7 +219,7 @@
         timestamptz deletedAt
     }
 
-    SELLERS {
+    sellers {
         int id
         int userId
         timestamptz createdAt
@@ -227,7 +227,7 @@
         timestamptz deletedAt
     }
 
-    PRODUCTS {
+    products {
         int id
         int sellerId
         string name
@@ -239,7 +239,7 @@
         timestamptz deletedAt
     }
 
-    ORDERS {
+    orders {
         int id
         int customerId
         text shippingAddress
@@ -250,7 +250,7 @@
         timestamptz deletedAt
     }
 
-    ORDER_ITEMS {
+    order_items {
         int id
         int orderId
         int productId
@@ -262,7 +262,7 @@
         timestamptz deletedAt
     }
 
-    CARTS {
+    carts {
         int id
         int userId
         json items
